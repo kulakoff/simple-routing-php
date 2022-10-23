@@ -8,20 +8,24 @@
         $routes[$path] = $callback;
     }
 
+    function res($message)
+    {
+        echo $message;
+    };
+
     route(
         '/',
-        function () {
-            echo "Main Page";
-        }
+        fn () => res("Main Page")
     );
 
-    route(
-        '/404',
-        function () {
-            echo "Not Found Page";
-        }
-    );
+    route('/signin', fn () => res("Sign in Page"));
 
+    route('/signip', fn () => res("Sign up Page"));
+
+    route('/about', fn () => res("About Page"));
+
+    route('/404', fn () => res("Not Found Page"));
+    
     function run()
     {
         global $routes;
