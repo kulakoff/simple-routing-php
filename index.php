@@ -4,10 +4,7 @@
     require_once "response.php";
 
 
-    route(
-        '/',
-        static fn () => response(200, "Main Page")
-    );
+    route('/', static fn () => response(200, "Main Page"));
 
     route('/signin', static fn ($params) => response(200, "Sign in Page"));
 
