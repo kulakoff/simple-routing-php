@@ -32,7 +32,7 @@ function run()
 
                 // collect params affter each slash
                 $params = array_slice($dropedPath, count($dropedPath) - $offset, count($dropedPath));
-                print_r($params);
+                // print_r($params);
                 $found = true;
 
                 // pass params to callback
